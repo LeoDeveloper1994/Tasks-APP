@@ -1,0 +1,95 @@
+@use "./mixins" as mix;
+
+.login-user-container {
+  max-width: 300px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3rem;
+  margin: auto;
+
+  h3 {
+    color: var(--White-primary);
+  }
+
+  .name-input-container {
+    position: relative;
+    @include mix.inputs
+  }
+
+  .email-input-container {
+    position: relative;
+    @include mix.inputs
+  }
+
+  .password-input-container {
+    position: relative;
+    @include mix.inputs;
+  }
+
+  button {
+    @include mix.buttons(var(--Note));
+    border-bottom: 4px solid rgb(252, 167, 10);
+  }
+
+  p {
+    text-align: center;
+    color: var(--ToDo);
+    font-size: 0.8rem;
+    cursor: pointer;
+  }
+}
+
+.modal-container {
+  @include mix.general-container;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+
+  .message-container {
+    width: 250px;
+    height: 250px;
+    background-color: var(--Dark-gray);
+    border-radius: 8px;
+
+    .modal-header {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      background-color: var(--Note);
+      height: 25px;
+
+      button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        width: 20px;
+        height: 15px;
+        color: var(--Dark-gray);
+        cursor: pointer;
+      }
+    }
+
+    .modal-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: calc(100% - 25px);
+      padding: 1.2rem;
+
+      h3 {
+        text-align: center;
+        color: var(--White-primary);
+      }
+    }
+  }
+
+}

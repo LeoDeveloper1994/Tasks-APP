@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap');
+
+:root {
+  /* Fonts */
+
+  --font-baijamjuree: 'Bai Jamjuree', sans-serif;
+
+  /* Colors */
+  --Dark-gray: rgb(30, 32, 36);
+  --Ligth-gray: rgba(30, 32, 36, 0.5);
+  --White-primary: rgb(227, 233, 245);
+
+  --Note: rgb(255, 255, 5);
+  --Info: rgb(60, 103, 233);
+  --Urgent: rgb(233, 27, 69);
+  --ToDo: rgb(252, 167, 10);
+  --Recipe: rgb(24, 255, 25);
+  --Meeting: rgb(167, 6, 199);
+  --List: rgb(0, 247, 255);
+}

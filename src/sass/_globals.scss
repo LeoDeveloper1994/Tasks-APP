@@ -1,0 +1,29 @@
+@use "./mixins" as mix;
+
+.login-container {
+  @include mix.general-container;
+
+  .login-content-container {
+    width: 100%;
+    height: 100%;
+
+    .app-title-container{
+      width: 100%;
+      text-align: center;
+      margin: 2rem 0;
+
+      h1 {
+        color: var(--Note);
+        letter-spacing: 4px;
+      }
+    }
+
+    .login-form-container {
+      width: 100%;
+    }
+  }
+}
+
+.dashboard-container{
+  @include mix.general-container;
+}

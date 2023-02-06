@@ -1,0 +1,57 @@
+@mixin general-container {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--Dark-gray);
+  padding: 4rem 2rem;
+}
+
+@mixin inputs {
+  input {
+    width: 100%;
+    color: var(--White-primary);
+    padding: 1rem 1rem;
+    border: 1px solid var(--White-primary);
+    border-radius: 8px;
+    transition: 500ms ease;
+    font-size: 1rem;
+
+    &:focus {
+      border-color: var(--Note);
+    }
+  }
+
+  label {
+    color: var(--White-primary);
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    transition: transform 500ms, color 300ms;
+    padding: 0 0.7rem;
+    cursor: text;
+  }
+
+  input:focus + label, input:not(:placeholder-shown) + label {
+    transform: translateY(-175%) scale(0.7);
+    transform-origin: top left;
+    background-color: var(--Dark-gray);
+    color: var(--Note);
+  }
+}
+
+@mixin buttons($bg-color: var(--Note)){
+  width: 160px;
+  height: 35px;
+  background-color: $bg-color;
+  color: var(--Dark-gray);
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+};

@@ -1,0 +1,42 @@
+html, body {
+  font-family: var(--font-baijamjuree);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  letter-spacing: 2px;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  font-family: var(--font-baijamjuree);
+}
+
+input {
+  outline: none;
+  background-color: transparent;
+  border: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px rgb(30, 32, 36) inset !important;
+}
+
+input:-webkit-autofill{
+  -webkit-text-fill-color: rgb(227, 233, 245) !important;
+}
+
+
